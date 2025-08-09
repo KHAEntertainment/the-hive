@@ -1,0 +1,100 @@
+{
+  "hive_info": {
+    "version": "1.0.0",
+    "installation_date": "AUTO_GENERATED",
+    "platform": "AUTO_DETECTED",
+    "installer_version": "1.0.0"
+  },
+  "user_preferences": {
+    "model_selection": {
+      "openrouter": {
+        "api_key_source": "environment", 
+        "avoid_providers": ["google/*"],
+        "prefer_free_models": true,
+        "fallback_chain": ["free_models", "gemini_cli", "claude_agents", "hive_collective"],
+        "default_model": "auto",
+        "temperature": 0.7,
+        "max_tokens": 4000
+      },
+      "gemini_cli": {
+        "enabled": true,
+        "fallback_priority": 2,
+        "api_key_source": "environment"
+      },
+      "claude_agents": {
+        "enabled": true,
+        "fallback_priority": 3,
+        "default_persona": "coder"
+      }
+    },
+    "cost_management": {
+      "monthly_ceiling_usd": 50.0,
+      "alert_threshold_percentage": 80,
+      "daily_limit_usd": 5.0,
+      "track_usage": true,
+      "cost_warnings": true,
+      "emergency_stop": true
+    },
+    "fallback_system": {
+      "enabled": true,
+      "max_retries": 3,
+      "timeout_seconds": 30,
+      "auto_retry_enabled": true,
+      "emergency_budget_override": false,
+      "fallback_cost_limit_usd": 10.0,
+      "min_success_rate": 0.7,
+      "quality_threshold": 0.8,
+      "health_check_interval_minutes": 5
+    },
+    "process_transparency": {
+      "show_status_indicators": true,
+      "show_model_info": true,
+      "show_cost_info": true,
+      "show_performance_metrics": true,
+      "real_time_updates": true,
+      "log_external_operations": true
+    },
+    "persona_system": {
+      "auto_validation": true,
+      "auto_correction": true,
+      "default_persona": "coder",
+      "persona_suggestions": true,
+      "context_awareness": true
+    },
+    "collective_intelligence": {
+      "byzantine_consensus": true,
+      "min_consensus_agents": 3,
+      "consensus_threshold": 0.67,
+      "fault_tolerance": true,
+      "learning_enabled": true,
+      "memory_sharing": true
+    },
+    "integration": {
+      "claude_code_hooks": true,
+      "superclaude_framework": true,
+      "claude_flow_orchestration": true,
+      "cross_tool_communication": true,
+      "automatic_context_switching": true
+    },
+    "ui_preferences": {
+      "emoji_support": "auto",
+      "color_output": true,
+      "progress_indicators": true,
+      "verbose_logging": false,
+      "compact_mode": false
+    },
+    "security": {
+      "secure_api_key_storage": true,
+      "encrypt_local_data": false,
+      "audit_logging": true,
+      "rate_limit_protection": true,
+      "input_validation": true
+    }
+  },
+  "system_detection": {
+    "detected_tools": [],
+    "platform_info": {},
+    "last_health_check": "NEVER",
+    "installation_status": "PENDING"
+  }
+}
