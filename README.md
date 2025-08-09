@@ -37,14 +37,66 @@ This single command installs a complete AI enhancement ecosystem that brings col
 
 ---
 
-## ✨ Key Features
+## 🚀 Major Features
+
+### ✨ OpenRouter Integration - Access 200+ AI Models
+**FULLY FUNCTIONAL** - Connect to GPT-4, Claude, Gemini, LLaMA, DeepSeek, and 200+ models through a single unified interface!
+
+- **🎯 Intelligent Model Selection**: Automatically chooses the best model for your task
+- **💰 Cost Optimization**: Smart routing to the most cost-effective models  
+- **🔄 Fallback Support**: Automatic failover when models are unavailable
+- **📊 Real-time Analytics**: Track usage, costs, and performance metrics
+- **🔧 Easy Setup**: Interactive wizard with `./setup-openrouter.sh`
+
+```bash
+# Quick Start - Get access to 200+ models in seconds!
+./setup-openrouter.sh  # Interactive setup wizard
+/sc:openrouter "Your task here" --model [any-of-200-models]
+```
+
+### 🤖 SuperClaude Multi-Agent Orchestration
+**FUNCTIONAL** - Advanced AI coordination with swarm intelligence, neural optimization, and collective decision-making.
+
+---
+
+## 📊 SuperClaude Commands Overview
+
+### ✅ Production-Ready Features
+
+| Command | Status | Description |
+|---------|--------|-------------|
+| **`/sc:openrouter`** | ✅ **FUNCTIONAL** | Access 200+ AI models with intelligent routing |
+| **`/sc:swarm`** | ✅ **FUNCTIONAL** | Multi-agent orchestration with hierarchical coordination |
+| **`/sc:neural`** | ✅ **FUNCTIONAL** | Neural pattern training with WASM SIMD acceleration |
+| **`/sc:hive-mind`** | ✅ **FUNCTIONAL** | Collective intelligence with Byzantine fault tolerance |
+| **`/sc:git-mcp`** | ✅ **FUNCTIONAL** | Convert GitHub repositories to MCP data sources |
+
+### 🚧 In Development
+
+| Command | Status | Description | Requirements |
+|---------|--------|-------------|-------------|
+| **`/sc:gemini`** | 🚧 **NOT FUNCTIONAL** | Google Gemini integration | Needs `gcloud` CLI + implementation layer - **Do not expect this to work yet** |
+| **`/sc:anthropic`** | 📋 **Planned** | Direct Anthropic API access | API key configuration |
+| **`/sc:perplexity`** | 📋 **Planned** | Real-time web search integration | API integration |
+
+---
+
+## ✨ Additional Key Features
 
 ### 🔄 **Intelligent Fallback System**
-4-tier resilient coordination that never fails:
+**FULLY FUNCTIONAL** - Multi-tier resilient coordination that never fails:
+
+**Current Functional Tiers**:
 ```
-OpenRouter → Gemini CLI → Claude Agents → Hive Collective
+OpenRouter (200+ Models) → Claude Agents → Hive Collective
 ```
-Your AI assistance continues even when individual services fail.
+
+**Planned Future Enhancement**:
+```
+OpenRouter → Gemini CLI (🚧 In Development) → Claude Agents → Hive Collective
+```
+
+Your AI assistance continues even when individual services fail, with OpenRouter providing the widest model selection as the primary tier. Gemini CLI integration is planned but not yet functional.
 
 ### 👤 **Smart Personas**
 Auto-activating domain specialists that understand context:
@@ -53,6 +105,19 @@ Auto-activating domain specialists that understand context:
 - 🎨 **Frontend** - UI/UX and accessibility
 - ⚙️ **Backend** - APIs and infrastructure
 - ...and 7 more specialized personas
+
+### 🔗 **Git-MCP Integration** 
+**FULLY FUNCTIONAL** - Convert any GitHub repository into an MCP data source instantly:
+```
+/sc:git-mcp https://github.com/facebook/react
+/sc:git-mcp microsoft/typescript
+/sc:git-mcp  # Interactive mode with prompts
+```
+- Access documentation, code examples, and API references  
+- Automatic GitHub → GitMCP URL conversion
+- Instant MCP server installation and setup
+- **Currently available**: react-docs, git-mcp, kilocode-docs
+- **Documentation sources**: gemini-cli-docs (docs only - CLI integration in development)
 
 ### 💰 **Cost Management**
 Never exceed your budget with intelligent protection:
@@ -80,6 +145,40 @@ Native support everywhere:
 - **macOS** (10.15+, Apple Silicon & Intel)
 - **Linux** (Ubuntu, CentOS, Arch, and more)
 - **Windows** (WSL2, Git Bash, MSYS2)
+
+---
+
+## 🗺️ Development Roadmap
+
+### Phase 1: Core Infrastructure ✅ COMPLETE
+- [x] SuperClaude command framework
+- [x] Multi-agent swarm orchestration (`/sc:swarm`)
+- [x] Neural pattern optimization (`/sc:neural`)
+- [x] Collective intelligence (`/sc:hive-mind`)
+- [x] OpenRouter integration with 200+ models
+- [x] Git-MCP repository integration (`/sc:git-mcp`)
+- [x] Session tracking and memory persistence
+
+### Phase 2: Multi-Model Expansion 🚧 IN PROGRESS
+- [x] OpenRouter 200+ model access ✅
+- [ ] Google Gemini integration (`/sc:gemini`) - 70% research/planning complete, **implementation not started**
+- [ ] Enhanced model selection algorithms
+- [ ] Cross-model context sharing
+- [ ] Unified prompt optimization
+
+### Phase 3: Advanced Features 📋 PLANNED Q1 2025
+- [ ] Direct Anthropic API integration
+- [ ] Perplexity real-time search
+- [ ] Custom model fine-tuning interface
+- [ ] Visual model integration (DALL-E, Midjourney)
+- [ ] Voice model support (ElevenLabs, Play.ht)
+
+### Phase 4: Enterprise Features 🎯 Q2 2025
+- [ ] Team collaboration workspaces
+- [ ] Audit logging and compliance
+- [ ] Custom model deployment
+- [ ] On-premise deployment options
+- [ ] Advanced cost management dashboard
 
 ---
 
@@ -157,31 +256,42 @@ cd the-hive
 
 ## 🚀 Quick Start
 
-### 1. Verify Installation
+### 🎯 Get Started with OpenRouter (200+ Models)
 ```bash
+# 1. Run the interactive setup wizard
+./setup-openrouter.sh
+
+# 2. Test with any model you want!
+/sc:openrouter "Write a Python web scraper" --model deepseek/deepseek-coder-v2
+/sc:openrouter "Design a modern UI" --model horizon/horizon-v1  
+/sc:openrouter "Analyze this codebase" --model anthropic/claude-3.5-sonnet
+```
+
+### 🔧 System Verification
+```bash
+# 1. Verify Installation
 the-hive status
-```
 
-### 2. Check System Health
-```bash
+# 2. Check System Health  
 the-hive health
-```
 
-### 3. Test The System
-```bash
+# 3. Test Core Features
 the-hive test "Create a React component with TypeScript"
 ```
 
-### 4. Use Enhanced Features
+### 🧠 Advanced SuperClaude Features
 ```bash
-# Intelligent fallback coordination
-the-hive test "Analyze this codebase for security vulnerabilities"
+# Multi-agent coordination
+/sc:swarm "Design a scalable microservices architecture" --agents 5
 
 # Collective intelligence mode
-the-hive collective "Design a scalable microservices architecture"
+/sc:hive-mind "Analyze security vulnerabilities" --consensus --agents 3
 
-# With SuperClaude commands
-/sc:orchestrate "Build a full-stack application" --hive-mode
+# Git repository integration
+/sc:git-mcp https://github.com/your-framework/repository
+
+# Neural pattern optimization
+/sc:neural "Optimize code patterns" --pattern coordination
 ```
 
 ---
@@ -250,12 +360,24 @@ We welcome contributions! The Hive thrives on community involvement.
 
 ### Ways to Contribute
 - 🐛 **Report Bugs**: [Open an issue](https://github.com/KHAEntertainment/the-hive/issues)
-- 💡 **Suggest Features**: Share your ideas for improvements
+- 💡 **Suggest Features**: Share your ideas for improvements  
 - 🧪 **Test & Validate**: Help test on different platforms
 - 📖 **Improve Docs**: Enhance documentation and examples
 - 💻 **Submit Code**: Fix bugs or add features
 
+### Priority Areas for Contributors
+- **Implementation layer for `/sc:gemini` command** - 70% complete, needs `gcloud` CLI integration
+- **Additional model integrations** - Anthropic API, Perplexity, custom models
+- **Performance optimization** - Model selection algorithms, response caching
+- **Documentation improvements** - Usage examples, troubleshooting guides
+
 See our [Contributing Guide](CONTRIBUTING.md) for detailed information.
+
+### 📚 Essential Resources
+1. Check `/docs/PROJECT_STATUS.md` for current project state
+2. Review `/docs/tool-configs/` for workflow templates  
+3. Use `/.superdesign/` for design iteration work
+4. Reference `/docs/index.json` for complete documentation catalog
 
 ---
 
@@ -275,23 +397,23 @@ Please report security vulnerabilities responsibly by emailing the maintainers r
 
 ## 📊 Project Status
 
-### Current Version: 1.0.0
+### Current Version: 2.0.0
 
-| Component | Status | Coverage |
-|-----------|--------|----------|
-| Core System | ✅ Stable | 100% |
-| macOS Support | ✅ Tested | Full |
-| Linux Support | ✅ Ready | Full |
-| Windows Support | ✅ Ready | WSL2/Git Bash |
-| Documentation | ✅ Complete | Comprehensive |
-| Testing | ✅ Comprehensive | 10 categories |
+| Feature | Status | Coverage | Notes |
+|---------|--------|----------|-------|
+| **OpenRouter Integration** | ✅ **FUNCTIONAL** | 200+ Models | Complete with intelligent routing |
+| **SuperClaude Commands** | ✅ **FUNCTIONAL** | 5 Core Commands | /sc:swarm, /sc:neural, /sc:hive-mind, /sc:git-mcp |
+| **Git-MCP Integration** | ✅ **FUNCTIONAL** | Full | GitHub → MCP data source conversion |
+| **Multi-Agent Coordination** | ✅ **FUNCTIONAL** | Advanced | Byzantine fault tolerance |
+| **Gemini Integration** | 🚧 **NOT FUNCTIONAL** | Planning Phase | Implementation layer needed - command will fail if attempted |
+| **Platform Support** | ✅ **Complete** | All | macOS, Linux, Windows (WSL2) |
+| **Documentation** | ✅ **Complete** | Comprehensive | Installation + usage guides |
 
-### Roadmap
-- 🔜 GUI installer option
-- 🔜 Additional AI service integrations
-- 🔜 Plugin architecture
-- 🔜 Cloud synchronization
-- 🔜 Enterprise features
+### Feature Implementation Status
+- **Production Ready**: OpenRouter, Core SuperClaude, Git-MCP, Multi-Agent
+- **In Development**: Gemini CLI integration (planning phase), Advanced model selection
+- **Planned Q1 2025**: Direct Anthropic API, Perplexity integration
+- **Planned Q2 2025**: Enterprise features, Team collaboration
 
 ---
 
@@ -324,7 +446,7 @@ Special thanks to all contributors and the AI development community!
 
 ## 📄 License
 
-The Hive is MIT licensed. See [LICENSE](LICENSE) for details.
+MIT License - See [LICENSE](LICENSE) file for details.
 
 ---
 
