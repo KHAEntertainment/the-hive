@@ -75,9 +75,8 @@ This single command installs a complete AI enhancement ecosystem that brings col
 
 | Command | Status | Description | Requirements |
 |---------|--------|-------------|-------------|
-| **`/sc:gemini`** | 🚧 **NOT FUNCTIONAL** | Google Gemini integration | Needs `gcloud` CLI + implementation layer - **Do not expect this to work yet** |
-| **`/sc:anthropic`** | 📋 **Planned** | Direct Anthropic API access | API key configuration |
-| **`/sc:perplexity`** | 📋 **Planned** | Real-time web search integration | API integration |
+| **`/sc:gemini`** | 🚧 **Work in Progress** | Google Gemini integration | Needs `gcloud` CLI + implementation layer - **not yet functional** |
+| **`/sc:openai`** | 📋 **Planned** | Direct OpenAI API access | API key configuration |
 
 ---
 
@@ -167,11 +166,11 @@ Native support everywhere:
 - [ ] Unified prompt optimization
 
 ### Phase 3: Advanced Features 📋 PLANNED Q1 2025
-- [ ] Direct Anthropic API integration
-- [ ] Perplexity real-time search
+- [ ] Direct OpenAI API integration (`/sc:openai`) with OpenAI-compatible API support
 - [ ] Custom model fine-tuning interface
 - [ ] Visual model integration (DALL-E, Midjourney)
 - [ ] Voice model support (ElevenLabs, Play.ht)
+- [ ] Enhanced model selection algorithms
 
 ### Phase 4: Enterprise Features 🎯 Q2 2025
 - [ ] Team collaboration workspaces
@@ -367,7 +366,7 @@ We welcome contributions! The Hive thrives on community involvement.
 
 ### Priority Areas for Contributors
 - **Implementation layer for `/sc:gemini` command** - 70% complete, needs `gcloud` CLI integration
-- **Additional model integrations** - Anthropic API, Perplexity, custom models
+- **OpenAI API integration (`/sc:openai`)** - Direct OpenAI + compatible API providers
 - **Performance optimization** - Model selection algorithms, response caching
 - **Documentation improvements** - Usage examples, troubleshooting guides
 
@@ -412,7 +411,7 @@ Please report security vulnerabilities responsibly by emailing the maintainers r
 ### Feature Implementation Status
 - **Production Ready**: OpenRouter, Core SuperClaude, Git-MCP, Multi-Agent
 - **In Development**: Gemini CLI integration (planning phase), Advanced model selection
-- **Planned Q1 2025**: Direct Anthropic API, Perplexity integration
+- **Planned Q1 2025**: Direct OpenAI API integration (`/sc:openai`), Enhanced routing
 - **Planned Q2 2025**: Enterprise features, Team collaboration
 
 ---
