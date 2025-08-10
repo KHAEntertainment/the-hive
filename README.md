@@ -69,8 +69,16 @@ See the [Installation Troubleshooting Guide](docs/installer-troubleshooting.md) 
 /sc:openrouter "Your task here" --model [any-of-200-models]
 ```
 
-### 🤖 SuperClaude Multi-Agent Orchestration
-**FUNCTIONAL** - Advanced AI coordination with swarm intelligence, neural optimization, and collective decision-making. Using Gemini-CLI and Openrouter Agents increases your overall context window size and can add cut cost-cielings by using numerous :free models! 
+### 🤖 SuperClaude Multi-Agent Coordination
+**FUNCTIONAL** - Advanced AI coordination with swarm intelligence, neural optimization, and collective decision-making.
+
+**🔥 BREAKTHROUGH: CLI Agent Integration** - Transform CLI tools into coordinated agents alongside API-based models:
+- **🔷 Gemini CLI Agent**: Google's Gemini CLI under Claude's orchestration using KiloCode approach
+- **🌐 OpenRouter API Agents**: 200+ models with intelligent routing and cost optimization  
+- **⚡ Native SuperClaude Agents**: Swarm intelligence, neural coordination, and collective decision-making
+- **🛠️ Unified Multi-Agent Control**: Seamless coordination between CLI tools, API services, and native agents
+
+Using Gemini CLI and OpenRouter agents increases your overall context window size and can cut cost ceilings by using numerous :free models! 
 
 ---
 
@@ -80,9 +88,9 @@ See the [Installation Troubleshooting Guide](docs/installer-troubleshooting.md) 
 
 | Command | Status | Description |
 |---------|--------|-------------|
-| **`/sc:gemini`** | ✅ **FUNCTIONAL** | Claude Controls Gemini CLI as a swarm Agent using [KiloCode](https://github.com/Kilo-Org/kilocode)'s CLI Harnessing approach! |
-| **`/sc:openrouter`** | ✅ **FUNCTIONAL** | Access 200+ AI models with intelligent routing |
-| **`/sc:swarm`** | ✅ **FUNCTIONAL** | Multi-agent orchestration with hierarchical coordination |
+| **`/sc:gemini`** | ✅ **FUNCTIONAL** | **Gemini CLI Agent** - Claude orchestrates Google's Gemini CLI using [KiloCode](https://github.com/Kilo-Org/kilocode)'s CLI Harnessing approach! |
+| **`/sc:openrouter`** | ✅ **FUNCTIONAL** | **Multi-Model API Agent** - Access 200+ AI models with intelligent routing |
+| **`/sc:swarm`** | ✅ **FUNCTIONAL** | **Multi-agent orchestration** - Coordinate CLI agents, API agents, and native agents |
 | **`/sc:neural`** | ✅ **FUNCTIONAL** | Neural pattern training with WASM SIMD acceleration |
 | **`/sc:hive-mind`** | ✅ **FUNCTIONAL** | Collective intelligence with Byzantine fault tolerance |
 | **`/sc:git-mcp`** | ✅ **FUNCTIONAL** | Convert GitHub repositories to MCP data sources for instant, persistant access [[Git-MCP](https://github.com/idosal/git-mcp)] |
@@ -92,25 +100,25 @@ See the [Installation Troubleshooting Guide](docs/installer-troubleshooting.md) 
 
 | Command | Status | Description | Requirements |
 |---------|--------|-------------|-------------|
-| **`/sc:gemini`** | ✅ **FUNCTIONAL** | Google Gemini integration | KiloCode approach - requires pre-authenticated Gemini CLI |
+| **`/sc:gemini`** | ✅ **FUNCTIONAL** | Google Gemini CLI integration | KiloCode approach - requires pre-authenticated Gemini CLI |
 | **`/sc:openai`** | 📋 **Planned** | Direct OpenAI API access | API key configuration |
 
 ---
 
 ## ✨ Additional Key Features
 
-### 🔄 **Intelligent Fallback System**
-**FULLY FUNCTIONAL** - Multi-tier resilient coordination that never fails:
+### 🔄 **Intelligent Multi-Agent Fallback System**
+**FULLY FUNCTIONAL** - Multi-tier resilient coordination across CLI and API agents:
 
-**Fully Functional Multi-Tier System**:
+**Fully Functional Multi-Tier Agent System**:
 ```
-OpenRouter (200+ Models) → Gemini CLI → Claude Agents → Hive Collective
+CLI Agents (Gemini CLI, Future CLIs) → API Agents (OpenRouter 200+ Models) → Native Agents (Claude) → Hive Collective
 ```
 
-Your AI assistance continues even when individual services fail, with multiple AI providers ensuring maximum availability:
-- **OpenRouter**: 200+ models with intelligent routing (primary tier)
- - **Gemini CLI**: Google Gemini integration using [KiloCode](https://github.com/Kilo-Org/kilocode) approach  
-- **Claude Agents**: Native SuperClaude capabilities
+Your AI assistance continues even when individual services fail, with multiple agent types ensuring maximum availability:
+- **CLI Agents**: Direct command-line tool orchestration (Gemini CLI proven, more coming)
+- **API Agents**: 200+ models via OpenRouter with intelligent routing  
+- **Native Agents**: SuperClaude capabilities and swarm intelligence
 - **Hive Collective**: Byzantine consensus system (ultimate fallback)
 
 ### 👤 **Smart Personas**
@@ -133,6 +141,21 @@ Auto-activating domain specialists that understand context:
 - Instant MCP server installation and setup
 - **Currently available**: react-docs, git-mcp, kilocode-docs
 - **Documentation sources**: gemini-cli-docs (docs only - CLI integration in development)
+
+### 🏗️ **Development Framework Intelligence**
+**COMPREHENSIVE** - Deep knowledge bases for major backend frameworks with 50+ SuperClaude commands:
+```bash
+# Access comprehensive framework guides
+/sc:backend-frameworks-fastapi    # FastAPI complete analysis & patterns
+/sc:backend-frameworks-django-rest # Django REST framework guide
+/sc:backend-frameworks-go         # Go web development ecosystem
+/sc:backend-frameworks-phoenix    # Phoenix/Elixir framework
+/sc:backend-frameworks-spring-boot # Spring Boot comprehensive guide
+```
+- **6 Framework Ecosystems**: FastAPI, Django REST, Go, Phoenix, Spring Boot, and growing
+- **Production Patterns**: Real-world examples, best practices, performance optimization
+- **Architecture Analysis**: System design, scalability, and deployment strategies
+- **Developer Tools**: Authentication, databases, cloud platforms, CSS frameworks, mobile development
 
 ### 💰 **Cost Management**
 Never exceed your budget with intelligent protection:
@@ -181,12 +204,15 @@ Native support everywhere:
 - [ ] Cross-model context sharing
 - [ ] Unified prompt optimization
 
-### Phase 3: Advanced Features 📋 PLANNED Q1 2025
+### Phase 3: Advanced Multi-Agent Features 📋 PLANNED Q1 2025
+- [ ] **Enhanced CLI Integration**: Cursor CLI, OpenAI CLI, Anthropic CLI coordination
+- [ ] **Universal CLI Framework**: Transform any CLI tool into coordinated agent
+- [ ] **Cross-CLI Context Sharing**: Share context between different CLI tools seamlessly
+- [ ] **CLI Swarm Orchestration**: Coordinate multiple CLI tools in unified workflows
 - [ ] Direct OpenAI API integration (`/sc:openai`) with OpenAI-compatible API support
+- [ ] Enhanced model selection algorithms and cross-provider intelligent routing
 - [ ] Custom model fine-tuning interface
 - [ ] Visual model integration (DALL-E, Midjourney)
-- [ ] Voice model support (ElevenLabs, Play.ht)
-- [ ] Enhanced model selection algorithms
 
 ### Phase 4: Enterprise Features 🎯 Q2 2025
 - [ ] Team collaboration workspaces
@@ -294,25 +320,25 @@ the-hive health
 the-hive test "Create a React component with TypeScript"
 ```
 
-### 🧠 Advanced SuperClaude Features
+### 🧠 Advanced Multi-Agent Coordination
 ```bash
-# Multi-agent coordination
-/sc:swarm "Design a scalable microservices architecture" --agents 5
+# CLI Agent orchestration
+/sc:gemini "Design a scalable architecture" --persona architect --context-level full
 
-# Google Gemini integration (requires authenticated CLI)
-/sc:gemini "Analyze this code architecture" --persona architect --context-level full
+# Multi-agent coordination (CLI + API + Native)
+/sc:swarm "Build full-stack application" --agents gemini-cli,openrouter,claude --coordination intelligent
 
-# Collective intelligence mode
-/sc:hive-mind "Analyze security vulnerabilities" --consensus --agents 3
+# Cross-agent collective intelligence
+/sc:hive-mind "Security audit with multiple perspectives" --consensus --agents gemini-cli,openrouter,native
 
-# Git repository integration
+# Git repository integration for all agents
 /sc:git-mcp https://github.com/your-framework/repository
 
-# Neural pattern optimization
-/sc:neural "Optimize code patterns" --pattern coordination
+# Neural pattern optimization across agent types
+/sc:neural "Optimize coordination patterns" --pattern multi-agent
 ```
 
-### 🔧 Gemini CLI Setup & Demo
+### 🔧 Gemini CLI Agent Setup & Demo
 ```bash
 # 1. Install Gemini CLI
 npm install -g @google/gemini-cli
@@ -320,10 +346,10 @@ npm install -g @google/gemini-cli
 # 2. Authenticate (follow OAuth flow)
 gemini
 
-# 3. Test with TheHive integration
+# 3. Test CLI agent integration with The Hive
 /sc:gemini "Hello world" --persona coder
 
-# 4. Advanced examples (FULLY TESTED ✅)
+# 4. Advanced CLI agent examples (FULLY TESTED ✅)
 /sc:gemini "Create a React user profile component" --persona designer --context-level full
 /sc:gemini "Analyze this code architecture" --persona analyst --context-level balanced
 /sc:gemini "Write comprehensive documentation" --persona writer --context-level minimal
@@ -444,20 +470,20 @@ Please report security vulnerabilities responsibly by emailing the maintainers r
 
 | Feature | Status | Coverage | Notes |
 |---------|--------|----------|-------|
-| **OpenRouter Integration** | ✅ **FUNCTIONAL** | 200+ Models | Complete with intelligent routing |
-| **SuperClaude Commands** | ✅ **FUNCTIONAL** | 6 Core Commands | /sc:swarm, /sc:neural, /sc:hive-mind, /sc:git-mcp, /sc:gemini |
+| **Multi-Agent Coordination** | ✅ **FUNCTIONAL** | CLI + API + Native | Gemini CLI, OpenRouter 200+ models, SuperClaude agents |
+| **CLI Agent Integration** | ✅ **FUNCTIONAL** | Gemini CLI | KiloCode approach proven, expansion planned |
+| **API Agent Network** | ✅ **FUNCTIONAL** | 200+ Models | Complete OpenRouter integration with intelligent routing |
+| **SuperClaude Commands** | ✅ **FUNCTIONAL** | 50+ Commands | Core coordination, development tools, framework guides |
 | **Git-MCP Integration** | ✅ **FUNCTIONAL** | Full | GitHub → MCP data source conversion |
-| **Multi-Agent Coordination** | ✅ **FUNCTIONAL** | Advanced | Byzantine fault tolerance |
-| **Gemini Integration** | ✅ **FUNCTIONAL** | KiloCode Approach | Live tested - generates 6K+ char professional responses |
 | **Platform Support** | ✅ **Complete** | All | macOS, Linux, Windows (WSL2) |
 | **Documentation** | ✅ **Complete** | Comprehensive | Installation + usage guides |
 
 ### Feature Implementation Status
-- **Production Ready & Live Tested**: OpenRouter (200+ models), SuperClaude Core, Git-MCP, Multi-Agent, **Gemini CLI** ✅
-- **Proven Performance**: Gemini CLI generates 6K+ character professional responses with complete code implementations
-- **In Development**: Advanced model selection algorithms, Cross-model context sharing
-- **Planned Q1 2025**: Direct OpenAI API integration (`/sc:openai`), Enhanced routing
-- **Planned Q2 2025**: Enterprise features, Team collaboration
+- **Production Ready & Live Tested**: Multi-Agent Coordination (CLI + API + Native), OpenRouter (200+ models), **Gemini CLI Agent** ✅
+- **Proven CLI Integration**: Gemini CLI generates 6K+ character professional responses with complete code implementations
+- **In Development**: Enhanced CLI integration, Cross-agent context sharing, Advanced model selection algorithms
+- **Planned Q1 2025**: Universal CLI Framework, Cursor CLI integration, Direct OpenAI API integration (`/sc:openai`)
+- **Planned Q2 2025**: Enterprise multi-agent features, Team collaboration workspaces
 
 ---
 
