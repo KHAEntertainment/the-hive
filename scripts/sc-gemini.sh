@@ -220,13 +220,13 @@ check_gemini_cli() {
         
         # Simple test to verify CLI is functional and authenticated
         # Note: OAuth authentication is done in advance via 'gemini' command setup
-        if timeout 10s gemini --help &>/dev/null; then
+        if gemini --help &>/dev/null; then
             echo "✅ Gemini CLI responding and ready"
             
             # Check if CLI is authenticated by testing a simple command
             # In KiloCode approach, authentication is pre-configured
             local auth_test_output=""
-            if auth_test_output=$(timeout 5s gemini --version 2>&1); then
+            if auth_test_output=$(gemini --version 2>&1); then
                 if echo "$auth_test_output" | grep -v -i "authentication\|login\|error\|failed"; then
                     echo "✅ Gemini CLI authenticated and functional"
                     return 0
@@ -631,8 +631,8 @@ Please provide a comprehensive response following the persona guidelines above."
         local temp_output=$(mktemp)
         local temp_error=$(mktemp)
         
-        # Execute Gemini CLI with timeout (30 seconds default)
-        if timeout 30s gemini --model "$model" -p "$full_prompt" > "$temp_output" 2> "$temp_error"; then
+        # Execute Gemini CLI (using native macOS compatibility)
+        if gemini --model "$model" -p "$full_prompt" > "$temp_output" 2> "$temp_error"; then
             gemini_output=$(cat "$temp_output")
             gemini_error=$(cat "$temp_error")
             execution_success=true
