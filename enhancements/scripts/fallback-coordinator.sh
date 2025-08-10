@@ -263,11 +263,13 @@ execute_gemini_fallback() {
     local session_id="$3"
     
     echo "📱 Attempting Gemini CLI fallback..."
+    echo "🎯 Using KiloCode integration approach..."
     
     # Check if Gemini CLI is available
     if ! command -v gemini &>/dev/null; then
         echo "❌ Gemini CLI not installed"
-        echo "💡 Install with: npm install -g @google-gemini/cli"
+        echo "💡 Install with: npm install -g @google/gemini-cli"
+        echo "📚 Or see: https://github.com/google/gemini-cli"
         return 1
     fi
     

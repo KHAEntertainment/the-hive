@@ -2,6 +2,50 @@
 
 Complete installation instructions for The Hive SuperClaude Enhancement Suite across all supported platforms.
 
+## 🔗 SuperClaude Git-MCP Integration
+
+The Hive includes a powerful `/sc:git-mcp` slash command that converts any GitHub repository into an MCP data source for Claude Code.
+
+### Usage Examples
+
+**Interactive Mode:**
+```
+/sc:git-mcp
+```
+Prompts for repository URL and provides guided setup
+
+**Direct Repository Installation:**
+```
+/sc:git-mcp https://github.com/anthropics/claude-code
+/sc:git-mcp microsoft/vscode
+```
+
+**Get Help:**
+```
+/sc:git-mcp --help
+```
+
+### How It Works
+1. **URL Conversion**: Automatically converts `github.com` to `gitmcp.io`
+2. **MCP Installation**: Installs repository as MCP server with auto-generated name
+3. **Scope Selection**: Choose global (all sessions) or local (current project)
+4. **Instant Access**: Repository content becomes available as MCP data source
+
+### Benefits
+- 🔍 **Documentation Access**: Query any repository's docs and README files
+- 💻 **Code Examples**: Reference implementation patterns and examples
+- 📚 **API References**: Access detailed API documentation
+- 🎯 **Contextual Help**: Get help specific to the tools you're using
+
+### Optional: Enhanced Git Operations
+```bash
+claude mcp add git-mcp npx mcp-remote https://gitmcp.io/idosal/git-mcp
+```
+- Advanced Git operations and repository management
+- Enhanced version control capabilities
+
+---
+
 ## 🚀 Quick Installation
 
 ### One-Command Install (All Platforms)
