@@ -1,0 +1,9 @@
+{
+    "test_name": "Hive Structure",
+    "status": "FAILED",
+    "duration_seconds": 0,
+    "exit_code": 1,
+    "timestamp": "2025-08-09T19:36:12Z",
+    "output_file": "output.log",
+    "error_file": "error.log"
+}

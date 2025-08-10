@@ -1,0 +1,8 @@
+{
+    "test_name": "Dependency Detection",
+    "status": "PASSED",
+    "duration_seconds": 0,
+    "timestamp": "2025-08-09T19:36:12Z",
+    "output_file": "output.log",
+    "error_file": "error.log"
+}

@@ -1,0 +1,9 @@
+{
+    "test_name": "Platform Detection",
+    "status": "FAILED",
+    "duration_seconds": 0,
+    "exit_code": 127,
+    "timestamp": "2025-08-09T09:20:36Z",
+    "output_file": "output.log",
+    "error_file": "error.log"
+}

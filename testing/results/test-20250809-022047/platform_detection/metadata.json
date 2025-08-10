@@ -1,0 +1,8 @@
+{
+    "test_name": "Platform Detection",
+    "status": "PASSED",
+    "duration_seconds": 0,
+    "timestamp": "2025-08-09T09:20:47Z",
+    "output_file": "output.log",
+    "error_file": "error.log"
+}

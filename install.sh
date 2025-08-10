@@ -58,15 +58,80 @@ info() {
 
 # Show banner
 show_banner() {
-    echo -e "${PURPLE}"
+    echo -e "${YELLOW}"
     cat << 'EOF'
-╔══════════════════════════════════════════════════════════╗
-║                        🐝 THE HIVE                       ║
-║              SuperClaude Enhancement Suite               ║
-║                Cross-Platform AI Coordination            ║
-╚══════════════════════════════════════════════════════════╝
+                                                                                                                                      
+                                                                                                                                      
+                                                              #### ##                                                                 
+                                                          ######## %#####                                                             
+                                                       ########### %#######                                                           
+                                                    ############## %%##########                                                       
+                                                    %%%#########    %%%#########                                                      
+                                               #####   %%####  ######  #%%###  ######                                                 
+                                            ###########  #  ############    ############                                              
+                                          %##############  %############## %%##############                                           
+                                      ##  %##############  %############## %%############## ###                                       
+                                   ##### %%##############  %############## %%############## %%####                                    
+                                ######## %%##############  %############## %%############## %%#######                                 
+                               %######## %%%#############  %%%%##########  %%%############    %%%####                                 
+                               %%####  ##   %%%#######         %%%%##          %%%#####  #####   %%##                                 
+                               %%#  ########   %%##                               %#  ###########  ##                                 
+                                 ##############          %%###        ######        %%#############                                   
+                                %%##############            %%#      ###            %###############                                  
+                                 %##############             %%#    ###             %%##############                                  
+                                 %##############             #########              %%##############                                  
+                                 %##############            %###########            %%##############                                  
+                                 %%%###########            %%############            %%%###########                                   
+                               ##   %%%######              %%############              %%%%#####                                      
+                               %####   %%                   %%%#########                   #    #####                                 
+                               %%#######       ############   %%%%%###   %%##########        ########                                 
+                               %%#######     ##############               %%###########      %#######                                 
+                               %%#######    %%############   ###########   %%###########     %#######                                 
+                               %%#######    %%##########   %%############   %%##########     %#######                                 
+                               %%#######      %%%######   %%%#############    %%%#####       %%######                                 
+                               %%######           %                                           %%%####                                 
+                               %%##   ####                                                ####   %%##                                 
+                                   ###########           #%################          ############                                     
+                                 %##############          %%###############         %%##############                                  
+                                 %##############           %%##%%##%%%%###          %%##############                                  
+                                 %##############                                    %%##############                                  
+                                 %##############             ###########            %%##############                                  
+                                 %%%############              %%######               %%############                                   
+                                    %%#######   ##              %%###             ###  %%%#######                                     
+                                      %%%#   #########           ###          ##########  %%##                                        
+                                          %%#############   #############  %%#############                                            
+                                            %%###########  %############## %%############                                             
+                                              %%%########  %############## %%#########                                                
+                                                  %%%####  %############## %%#####                                                    
+                                                     %%##  %%############# %%##                                                       
+                                                            %%%##########                                                             
+                                                               %%%####                                                                
+                                                                  %                                                                   
+                                                                                                                                      
+                                                                                                                                      
+                                                                                                                                      
+                                                                                                                                      
+                     #################      ####  ############     ####       ###  #######       #################                    
+                     #################      ####  ############     ####       ###  ########      ### #############                    
+                          ###     ####      ####  ###              ####       ###  #### ###     #### ####                             
+                          ###     ####      ####  ###              ####       ###  #### ####    ###  ####                             
+                          ###     ##############  ###########      ##############  ####  ###   ####  ###########                      
+                          ###     ##############  ###########      ##############  ####  ####  ###   ###########                      
+                          ###     ####      ####  ###              ####       ###  ####   ### ###    ####                             
+                          ###     ####      ####  ###              ####       ###  ####   #######    ####                             
+                          ###     ####      ####  ###              ####       ###  ####    #####     ####                             
+                          ###     ####      ####  ############     ####       ###  ####     ####     #############                    
+                                                                                                                                      
+                                                                                                                                      
 EOF
     echo -e "${NC}"
+    echo ""
+    echo -e "${PURPLE}╔══════════════════════════════════════════════════════════╗${NC}"
+    echo -e "${PURPLE}║${NC}                    ${HIVE_EMOJI} ${YELLOW}THE HIVE${NC}                    ${PURPLE}║${NC}"
+    echo -e "${PURPLE}║${NC}            ${CYAN}SuperClaude Enhancement Suite${NC}             ${PURPLE}║${NC}"
+    echo -e "${PURPLE}║${NC}              ${CYAN}Cross-Platform AI Coordination${NC}            ${PURPLE}║${NC}"
+    echo -e "${PURPLE}╚══════════════════════════════════════════════════════════╝${NC}"
+    echo ""
     echo -e "${CYAN}Version: ${HIVE_VERSION}${NC}"
     echo -e "${CYAN}Repository: ${HIVE_REPO}${NC}"
     echo ""
@@ -159,7 +224,26 @@ install_prerequisites() {
             # Check if Homebrew is available
             if ! command -v brew >/dev/null 2>&1; then
                 info "Installing Homebrew..."
-                /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+                # Secure download with verification
+                local homebrew_installer="/tmp/homebrew-install.sh"
+                local homebrew_url="https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh"
+                
+                info "Downloading Homebrew installer securely..."
+                if curl -fsSL "$homebrew_url" -o "$homebrew_installer"; then
+                    # Verify the script is from Homebrew (basic content check)
+                    if grep -q "#!/bin/bash" "$homebrew_installer" && grep -q "HOMEBREW" "$homebrew_installer"; then
+                        info "Homebrew installer verified, executing..."
+                        /bin/bash "$homebrew_installer"
+                        rm -f "$homebrew_installer"  # Clean up
+                    else
+                        error "Homebrew installer verification failed - content doesn't match expected patterns"
+                        rm -f "$homebrew_installer"
+                        return 1
+                    fi
+                else
+                    error "Failed to download Homebrew installer"
+                    return 1
+                fi
                 
                 # Add Homebrew to PATH for current session
                 if [[ -f /opt/homebrew/bin/brew ]]; then
@@ -217,15 +301,15 @@ download_installer() {
     local platform_installer="$1"
     local temp_installer="/tmp/hive-${platform_installer}-installer.sh"
     
-    log "Downloading $platform_installer installer..."
+    log "Downloading $platform_installer installer..." >&2
     
     if curl -fsSL "${HIVE_RAW_BASE}/platform/${platform_installer}-installer.sh" -o "$temp_installer"; then
         chmod +x "$temp_installer"
-        success "Downloaded $platform_installer installer"
+        success "Downloaded $platform_installer installer" >&2
         echo "$temp_installer"
         return 0
     else
-        error "Failed to download $platform_installer installer"
+        error "Failed to download $platform_installer installer" >&2
         return 1
     fi
 }

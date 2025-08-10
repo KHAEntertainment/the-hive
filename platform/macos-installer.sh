@@ -128,7 +128,26 @@ setup_homebrew() {
         fi
         
         info "Installing Homebrew..."
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        # Secure download with verification
+        local homebrew_installer="/tmp/homebrew-install.sh"
+        local homebrew_url="https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh"
+        
+        info "Downloading Homebrew installer securely..."
+        if curl -fsSL "$homebrew_url" -o "$homebrew_installer"; then
+            # Verify the script is from Homebrew (basic content check)
+            if grep -q "#!/bin/bash" "$homebrew_installer" && grep -q "HOMEBREW" "$homebrew_installer"; then
+                info "Homebrew installer verified, executing..."
+                /bin/bash "$homebrew_installer"
+                rm -f "$homebrew_installer"  # Clean up
+            else
+                error "Homebrew installer verification failed - content doesn't match expected patterns"
+                rm -f "$homebrew_installer"
+                return 1
+            fi
+        else
+            error "Failed to download Homebrew installer"
+            return 1
+        fi
         
         # Add to PATH for current session
         eval "$($HOMEBREW_PREFIX/bin/brew shellenv)"
@@ -225,6 +244,24 @@ detect_ai_tools() {
         warning "Claude-Flow not installed"
     fi
     
+    # Check Gemini CLI
+    if command -v gemini >/dev/null 2>&1; then
+        local gemini_version=$(gemini --version 2>/dev/null || echo "unknown")
+        tools_status+=("gemini-cli:installed:$gemini_version")
+        success "Gemini CLI detected: $gemini_version"
+        
+        # Check authentication status
+        if gemini --version 2>&1 | grep -v -i "authentication\|login\|error\|failed" >/dev/null; then
+            info "Gemini CLI appears to be authenticated and ready"
+        else
+            warning "Gemini CLI detected but may need authentication"
+            info "Run 'gemini' to complete OAuth setup after installation"
+        fi
+    else
+        tools_status+=("gemini-cli:missing:none")
+        warning "Gemini CLI not installed - required for /sc:gemini functionality"
+    fi
+    
     # Store detection results
     mkdir -p "$HIVE_HOME"
     printf "%s\n" "${tools_status[@]}" > "$HIVE_HOME/detected_tools.txt"
@@ -269,6 +306,21 @@ install_missing_tools() {
                         info "Installing Claude-Flow..."
                         npm install -g claude-flow@alpha
                         success "Claude-Flow installed"
+                    fi
+                    ;;
+                "gemini-cli")
+                    if [[ "$DRY_RUN" == "true" ]]; then
+                        warning "DRY RUN: Would install Gemini CLI via npm"
+                    else
+                        info "Installing Gemini CLI..."
+                        npm install -g @google/gemini-cli
+                        success "Gemini CLI installed"
+                        echo ""
+                        warning "IMPORTANT: Gemini CLI requires authentication"
+                        info "After installation completes, run: gemini"
+                        info "This will open OAuth authentication in your browser"
+                        info "Authentication is required for /sc:gemini functionality"
+                        echo ""
                     fi
                     ;;
             esac

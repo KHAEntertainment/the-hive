@@ -26,6 +26,8 @@
 - 🛠️ **[Claude Code](https://github.com/anthropics/claude-code)** - Official Anthropic AI coding assistant
 - 🧠 **[SuperClaude Framework](https://github.com/SuperClaude-Org/SuperClaude_Framework)** - Enhanced personas and commands
 - ⚡ **[Claude-Flow](https://github.com/ruvnet/claude-flow)** - Advanced AI orchestration platform
+- 🔷 **[Gemini CLI](https://github.com/google-gemini/generative-ai-js/tree/main/packages/cli)** - Google Gemini CLI! Under Claude's Control!!
+- 🌐 **[OpenRouter API](https://openrouter.ai/)** - Add additional swarm agents from Openrouter
 
 ### 🚀 One Command to Rule Them All
 
@@ -34,6 +36,19 @@ curl -L https://raw.githubusercontent.com/KHAEntertainment/the-hive/main/install
 ```
 
 This single command installs a complete AI enhancement ecosystem that brings collective intelligence to your development workflow.
+
+#### Troubleshooting Installation
+If the installer appears to run silently (especially on Ubuntu/SSH), verify your installation:
+
+```bash
+# Download and run the verification script
+curl -L https://raw.githubusercontent.com/KHAEntertainment/the-hive/main/scripts/verify-installation.sh | bash
+
+# Or check manually
+ls ~/.hive && ls ~/.claude/commands/sc && echo "✅ Installation successful!"
+```
+
+See the [Installation Troubleshooting Guide](docs/installer-troubleshooting.md) for detailed help.
 
 ---
 
@@ -55,7 +70,7 @@ This single command installs a complete AI enhancement ecosystem that brings col
 ```
 
 ### 🤖 SuperClaude Multi-Agent Orchestration
-**FUNCTIONAL** - Advanced AI coordination with swarm intelligence, neural optimization, and collective decision-making.
+**FUNCTIONAL** - Advanced AI coordination with swarm intelligence, neural optimization, and collective decision-making. Using Gemini-CLI and Openrouter Agents increases your overall context window size and can add cut cost-cielings by using numerous :free models! 
 
 ---
 
@@ -65,12 +80,13 @@ This single command installs a complete AI enhancement ecosystem that brings col
 
 | Command | Status | Description |
 |---------|--------|-------------|
+| **`/sc:gemini`** | ✅ **FUNCTIONAL** | Claude Controls Gemini CLI as a swarm Agent using [KiloCode](https://github.com/Kilo-Org/kilocode)'s CLI Harnessing approach! |
 | **`/sc:openrouter`** | ✅ **FUNCTIONAL** | Access 200+ AI models with intelligent routing |
 | **`/sc:swarm`** | ✅ **FUNCTIONAL** | Multi-agent orchestration with hierarchical coordination |
 | **`/sc:neural`** | ✅ **FUNCTIONAL** | Neural pattern training with WASM SIMD acceleration |
 | **`/sc:hive-mind`** | ✅ **FUNCTIONAL** | Collective intelligence with Byzantine fault tolerance |
-| **`/sc:git-mcp`** | ✅ **FUNCTIONAL** | Convert GitHub repositories to MCP data sources |
-| **`/sc:gemini`** | ✅ **FUNCTIONAL** | Google Gemini integration using KiloCode approach |
+| **`/sc:git-mcp`** | ✅ **FUNCTIONAL** | Convert GitHub repositories to MCP data sources for instant, persistant access [[Git-MCP](https://github.com/idosal/git-mcp)] |
+
 
 ### 🚧 In Development
 
@@ -93,7 +109,7 @@ OpenRouter (200+ Models) → Gemini CLI → Claude Agents → Hive Collective
 
 Your AI assistance continues even when individual services fail, with multiple AI providers ensuring maximum availability:
 - **OpenRouter**: 200+ models with intelligent routing (primary tier)
-- **Gemini CLI**: Google Gemini integration using KiloCode approach  
+ - **Gemini CLI**: Google Gemini integration using [KiloCode](https://github.com/Kilo-Org/kilocode) approach  
 - **Claude Agents**: Native SuperClaude capabilities
 - **Hive Collective**: Byzantine consensus system (ultimate fallback)
 
