@@ -32,7 +32,8 @@
 ### 🚀 One Command to Rule Them All
 
 ```bash
-curl -L https://raw.githubusercontent.com/KHAEntertainment/the-hive/main/install.sh | bash
+# Download and verify, then execute
+curl -fsSL https://raw.githubusercontent.com/KHAEntertainment/the-hive/main/install.sh -o install.sh && chmod +x install.sh && ./install.sh
 ```
 
 This single command installs a complete AI enhancement ecosystem that brings collective intelligence to your development workflow.
